@@ -6,7 +6,7 @@ from . import models
 
 class DevlogList(ListView):
     queryset = models.Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
+    template_name = 'main.html'
     paginate_by = 2
 
 class DevlogDetail(DetailView):
